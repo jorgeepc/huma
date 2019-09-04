@@ -7,7 +7,7 @@ export const catchNotFound = (
   next: NextFunction,
 ) => {
   const err = new Error('Not Found')
-  err['status'] = 404
+  //err['status'] = 404
   next(err)
 }
 
@@ -40,5 +40,6 @@ export const errorHandler = (
   res: Response,
   next: NextFunction,
 ) => {
-  res.status(err.status || 500).send({ error: err.message })
+  //res.status(err.status || 500).send({ error: err.message })
+  res.status(500).send({ error: err.message })
 }
