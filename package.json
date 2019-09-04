@@ -6,14 +6,14 @@
     "type": "git",
     "url": ""
   },
-  "main": "src/app.ts",
+  "main": "src/server.ts",
   "author": "Jorge Padilla",
   "license": "MIT",
   "scripts": {
     "start": "npm run serve",
     "build": "npm run build-ts && npm run lint",
-    "serve": "node dist/app.js",
-    "watch-node": "nodemon dist/app.js",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
     "test": "jest --forceExit --coverage --verbose",
     "watch-test": "npm run test -- --watchAll",
@@ -23,7 +23,7 @@
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|ts|tsx|md|graphql|mdx)\"",
     "debug": "npm run build && npm run watch-debug",
-    "serve-debug": "nodemon --inspect dist/app.js",
+    "serve-debug": "nodemon --inspect dist/server.js",
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "@types/express": "^4.17.1",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.3",
+    "@types/supertest": "^2.0.8",
     "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
@@ -47,6 +48,7 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
+    "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
     "typescript": "^3.6.2"
   }

@@ -30,6 +30,12 @@ npm start
 npm run watch
 ```
 
+- Run your tests
+
+```
+npm test
+```
+
 Finally, navigate to `http://localhost:3000/users/huma` and you should see our example endpoint being served locally!
 
 # Project Structure
@@ -50,7 +56,8 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 | **src/loaders**         | Contains the startup process of your node server                                               |
 | **src/types**           | Holds .d.ts files not found on DefinitelyTyped.                                                |
 | **src/utils**           | Contains some utilities, like an error handler and a logger                                    |
-| **src**/app.ts          | Entry point to your express app                                                                |
+| **src**/app.ts          | Express app initialization                                                                     |
+| **src**/server.ts       | Entry point to your express app                                                                |
 | **test**                | Contains your tests. Separate from source because there is a different build process.          |
 | .env.example            | API keys, tokens, passwords, database URI. Clone this, but don't commit it in to public repos. |
 | .eslintignore           | Config settings for paths to exclude from linting                                              |
@@ -64,6 +71,6 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 # Roadmap
 
 - [ ] MongoDB integration
-- [ ] Unit tests examples
+- [x] Tests examples
 - [ ] Continuous integration with CircleCI
 - [ ] Continuous delivery with CircleCI
