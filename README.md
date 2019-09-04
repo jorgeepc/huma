@@ -56,17 +56,17 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 | **src/loaders**         | Contains the startup process of your node server                                               |
 | **src/types**           | Holds .d.ts files not found on DefinitelyTyped.                                                |
 | **src/utils**           | Contains some utilities, like an error handler and a logger                                    |
-| **src**/app.ts          | Express app initialization                                                                     |
-| **src**/server.ts       | Entry point to your express app                                                                |
+| **src/app.ts**          | Express app initialization                                                                     |
+| **src/server.ts**       | Entry point to your express app                                                                |
 | **test**                | Contains your tests. Separate from source because there is a different build process.          |
-| .env.example            | API keys, tokens, passwords, database URI. Clone this, but don't commit it in to public repos. |
-| .eslintignore           | Config settings for paths to exclude from linting                                              |
-| .eslintrc               | Config settings for ESLint code style checking                                                 |
-| .prettierignore         | Config settings for paths to exclude from prettier                                             |
-| .prettierrc             | Config settings for Prettier code style formatter                                              |
-| jest.config.js          | Used to configure Jest running tests written in TypeScript                                     |
-| package.json            | File that contains npm dependencies as well as build scripts                                   |
-| tsconfig.json           | Config settings for compiling server code written in TypeScript                                |
+| **.env.example**        | API keys, tokens, passwords, database URI. Clone this, but don't commit it in to public repos. |
+| **.eslintignore**       | Config settings for paths to exclude from linting                                              |
+| **.eslintrc**           | Config settings for ESLint code style checking                                                 |
+| **.prettierignore**     | Config settings for paths to exclude from prettier                                             |
+| **.prettierrc**         | Config settings for Prettier code style formatter                                              |
+| **jest.config.js**      | Used to configure Jest running tests written in TypeScript                                     |
+| **package.json**        | File that contains npm dependencies as well as build scripts                                   |
+| **tsconfig.json**       | Config settings for compiling server code written in TypeScript                                |
 
 # Roadmap
 
