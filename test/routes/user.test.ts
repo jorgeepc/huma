@@ -1,7 +1,16 @@
 import { app, request } from '../common'
+import User from '../../src/models/user'
 
 describe('user route', () => {
-  const user = {
+  const user: User = {
+    // generic random value from 1 to 100 only for tests so far
+    id: Math.floor(Math.random() * 100) + 1,
+    firstName: 'Huma',
+    lastName: 'Nito',
+    email: 'huma@nito.com',
+    password: 'password',
+    phone: '555555',
+    userStatus: 1,
     username: 'huma',
   }
 
