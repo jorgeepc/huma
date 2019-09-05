@@ -54,8 +54,9 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 | **src/api/routes**      | Contains your routes definition                                                                |
 | **src/config**          | Load config environment variables                                                              |
 | **src/loaders**         | Contains the startup process of your node server                                               |
+| **src/models**          | Contains TypeScript interfaces                                                                 |
 | **src/types**           | Holds .d.ts files not found on DefinitelyTyped.                                                |
-| **src/utils**           | Contains some utilities, like an error handler and a logger                                    |
+| **src/utils**           | Contains some utilities, like an error handler, formatter and a logger                         |
 | **src/app.ts**          | Express app initialization                                                                     |
 | **src/server.ts**       | Entry point to your express app                                                                |
 | **test**                | Contains your tests. Separate from source because there is a different build process.          |
