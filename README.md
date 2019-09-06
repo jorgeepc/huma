@@ -17,6 +17,12 @@ cd <project_name>
 npm install
 ```
 
+- Clone the `.env.example` file to `.env`, and add your own variables
+
+```
+cp .env.example .env
+```
+
 - Build and run the project
 
 ```
@@ -30,13 +36,13 @@ npm start
 npm run watch
 ```
 
-- Run your tests
+- To run your tests
 
 ```
 npm test
 ```
 
-Finally, navigate to `http://localhost:3000/users/huma` and you should see our example endpoint being served locally!
+Finally, post a user to `http://localhost:3000/users` and you should see our example endpoint being served locally!
 
 # Project Structure
 
