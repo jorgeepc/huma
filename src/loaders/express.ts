@@ -7,6 +7,7 @@ import {
   clientErrorHandler,
   errorHandler,
 } from '../utils/errorHandler'
+import Logger from '../utils/logger'
 
 export default ({ app }: { app: express.Application }) => {
   /**
@@ -31,4 +32,6 @@ export default ({ app }: { app: express.Application }) => {
   app.use(logging)
   app.use(clientErrorHandler)
   app.use(errorHandler)
+
+  Logger.info('✌️ Express loaded')
 }

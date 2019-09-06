@@ -1,11 +1,9 @@
 import express from 'express'
 import expressLoader from './express'
-import Logger from '../utils/logger'
+import mongooseLoader from './mongoose'
 
-export default async ({ app }: { app: express.Application }) => {
-  // TODO: Load mongo
-  Logger.info('✌️ DB loaded and connected')
+export default ({ app }: { app: express.Application }) => {
+  mongooseLoader()
 
   expressLoader({ app })
-  Logger.info('✌️ Express loaded')
 }

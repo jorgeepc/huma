@@ -55,6 +55,7 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 | **src/config**          | Load config environment variables                                                              |
 | **src/loaders**         | Contains the startup process of your node server                                               |
 | **src/models**          | Contains TypeScript interfaces                                                                 |
+| **src/schemas**         | Contains mongoose schemas                                                                      |
 | **src/types**           | Holds .d.ts files not found on DefinitelyTyped.                                                |
 | **src/utils**           | Contains some utilities, like an error handler, formatter and a logger                         |
 | **src/app.ts**          | Express app initialization                                                                     |
@@ -71,7 +72,8 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 
 # Roadmap
 
-- [ ] MongoDB integration
+- [x] MongoDB integration
 - [x] Tests examples
+- [ ] JWT auth
 - [ ] Continuous integration with CircleCI
 - [ ] Continuous delivery with CircleCI
