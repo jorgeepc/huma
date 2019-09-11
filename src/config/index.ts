@@ -16,13 +16,13 @@ if (fs.existsSync('.env')) {
 const ENVIRONMENT = process.env.NODE_ENV
 const prod = ENVIRONMENT === 'production' // Anything else is treated as 'dev'
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000
-export const SESSION_SECRET = process.env.SESSION_SECRET
+export const SECRET = process.env.SECRET
 export const MONGODB_URI = prod
   ? process.env.MONGODB_URI
   : process.env.MONGODB_URI_LOCAL
 
-if (!SESSION_SECRET) {
-  Logger.error('No client secret. Set SESSION_SECRET environment variable.')
+if (!SECRET) {
+  Logger.error('No client secret. Set SECRET environment variable.')
   process.exit(1)
 }
 
@@ -41,7 +41,7 @@ if (!MONGODB_URI) {
 
 export default {
   /**
-   * Your favorite port
+   * Environment
    */
   environment: ENVIRONMENT,
   /**
@@ -49,11 +49,11 @@ export default {
    */
   port: PORT,
   /**
-   * Your favorite port
+   * Your secret
    */
-  sessionSecret: SESSION_SECRET,
+  secret: SECRET,
   /**
-   * Your favorite port
+   * Your mongo db uri
    */
   mongoDBURI: MONGODB_URI,
 }
