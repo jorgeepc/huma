@@ -1,12 +1,10 @@
 import express from 'express'
 import loaders from './loaders'
 
-function startApp() {
+export default async () => {
   const app = express()
 
-  loaders({ app })
+  await loaders({ app })
 
   return app
 }
-
-export default startApp()

@@ -3,8 +3,8 @@ import expressLoader from './express'
 import mongooseLoader from './mongoose'
 import passportLoader from './passport'
 
-export default ({ app }: { app: express.Application }) => {
-  mongooseLoader()
+export default async ({ app }: { app: express.Application }) => {
+  await mongooseLoader()
 
   expressLoader({ app })
 

@@ -1,4 +1,4 @@
 import request from 'supertest'
-import app from '../src/app'
+import startApp from '../src/app'
 
-export { app, request }
+export { startApp, request }
