@@ -10,6 +10,7 @@
   "author": "Jorge Padilla",
   "license": "MIT",
   "scripts": {
+    "prestart": "node dist/utils/downloadEnvFromGCS.js",
     "start": "npm run serve",
     "build": "npm run build-ts && npm run lint",
     "serve": "node dist/server.js",
@@ -27,6 +28,7 @@
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
   "dependencies": {
+    "@google-cloud/storage": "^3.2.1",
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",

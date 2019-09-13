@@ -18,6 +18,7 @@ coverage
 
 # API keys and secrets
 .env
+gce.json
 
 # Dependency directory
 node_modules

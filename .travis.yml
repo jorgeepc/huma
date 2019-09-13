@@ -1,12 +1,22 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 sudo: required
 services:
-  - docker
-  - mongodb
+- docker
+- mongodb
 before_script:
-  - sleep 15
-  - mongo huma-test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+- sleep 15
+- mongo huma-test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script:
-  - npm test
+- npm test
+deploy:
+  provider: gae
+  project: nimble-arcana-252815
+  keyfile: gce.json
+  skip_cleanup: true
+  verbosity: debug
+  on: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_c55a0876f0b9_key -iv $encrypted_c55a0876f0b9_iv
+  -in gce.json.enc -out gce.json -d
