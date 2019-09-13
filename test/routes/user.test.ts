@@ -1,7 +1,11 @@
-import { app, request } from '../common'
+import { Application } from 'express'
+import { startApp, request } from '../common'
 import UserModel from '../../src/schemas/user'
 
 describe('user route', () => {
+  let app: Application
+  let token: string
+
   const user = {
     firstName: 'Huma',
     lastName: 'Nito',
@@ -12,11 +16,11 @@ describe('user route', () => {
     username: 'huma',
   }
 
-  let token: string
-
   beforeAll(async () => {
+    app = await startApp()
     expect(UserModel.modelName).toBe('User')
-    await UserModel.collection.drop()
+    // TODO: drop collection
+    // await UserModel.collection.drop()
     const newUser = new UserModel(user)
     await newUser.save()
   })
