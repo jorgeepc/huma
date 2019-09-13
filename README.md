@@ -2,6 +2,8 @@
 
 ## A powerful starter template for RESTful Web Services with TypeScript 🌽
 
+[![Build Status](https://travis-ci.org/jorgeepc/huma.svg?branch=master)](https://travis-ci.org/jorgeepc/huma)
+
 # Getting started
 
 - Clone the repository
