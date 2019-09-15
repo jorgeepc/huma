@@ -84,4 +84,4 @@ TypeScript (`.ts`) files live in your `src` folder and after compilation are out
 - [x] Tests examples
 - [x] JWT auth
 - [x] Continuous integration with TravisCI
-- [ ] Continuous delivery with TravisCI
+- [x] Continuous delivery with TravisCI
